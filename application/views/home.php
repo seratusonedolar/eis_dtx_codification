@@ -21,7 +21,7 @@ $this->load->section('scriptJS', '/home_js', []);
 			</div>
 		</div>
 		<!-- Iframe dashboard -->
-		<div class="card">
+		<!-- <div class="card">
 			<div class="card-header">
 				<h3 class="card-title">Chart</h3>
 				<div class="card-tools">
@@ -31,15 +31,9 @@ $this->load->section('scriptJS', '/home_js', []);
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe
-					width="600"
-					height="400"
-					seamless
-					frameBorder="0"
-					scrolling="no"
-					src="http://192.168.31.25:8088/superset/explore/p/mbkzKP5aB8E/?standalone=1&height=400">
+				<iframe src="http://192.168.31.190:8088/superset/dashboard/18/?native_filters_key=NDJwQ0dkR4sdg_tX_clSUajr1CLb-GizQOb23F5ebNu6cZejkxR4kjF0WYlGnU3e" width="100%" height="800" seamless frameBorder="0" scrolling="yes">
 				</iframe>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
