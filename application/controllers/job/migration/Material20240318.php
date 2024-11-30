@@ -21,11 +21,17 @@ class Material20240318 extends CI_Controller
 		// $this->ProductIBeanService->generateCHE();
 		
 		//bulk update cari parentnnya dari ibean di ibeandetail
-	    $this->ProductIBeanDetailService->bulkupdateFAB();
-		$this->ProductIBeanDetailService->bulkupdateTRM();
-		$this->ProductIBeanDetailService->bulkupdatePKG();
-		$this->ProductIBeanDetailService->bulkupdateINS();
-		$this->ProductIBeanDetailService->bulkupdateCHE();
+	    // $this->ProductIBeanDetailService->bulkupdateFAB();
+		// $this->ProductIBeanDetailService->bulkupdateTRM();
+		// $this->ProductIBeanDetailService->bulkupdatePKG();
+		// $this->ProductIBeanDetailService->bulkupdateINS();
+		// $this->ProductIBeanDetailService->bulkupdateCHE();
+
+		//bulk update cari parentnnya dari ibean di ibeandetail (241126) NEW
+	    $this->ProductIBeanDetailService->bulkupdateFABnew();
+		$this->ProductIBeanDetailService->bulkupdateTRMnew();
+		$this->ProductIBeanDetailService->bulkupdatePKGnew();
+		$this->ProductIBeanDetailService->bulkupdateINSnew();
 
 		// $this->load->model('Services/AdstorageBeanDetailService');
 		// $this->AdstorageBeanDetailService->generateTechInformationFAB();

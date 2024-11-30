@@ -401,4 +401,181 @@ class ProductIBeanDetailService extends CI_model
 		var_dump('DONE');
 		return $resp;
 	}
+
+	public function bulkupdateFABnew()
+	{
+		$this->db->trans_begin();
+
+		$q = $this->db->query("
+			update
+			datatex_productibeandtl_241126 a
+			set dtxproductibeanid = b.dtxproductibeanid  
+			from datatex_productibean_241126 b 
+			where 
+			trim(a.itemtypecode) = trim(b.itemtypecode) and 
+			trim(a.subcode01) = trim(b.subcode01) and
+			trim(a.subcode02) = trim(b.subcode02) and
+			trim(a.subcode03) = trim(b.subcode03) and
+			trim(a.subcode04) = trim(b.subcode04) and
+			trim(a.subcode05) = trim(b.subcode05) and
+			trim(a.subcode06) = trim(b.subcode06) and
+			trim(a.subcode07) = trim(b.subcode07) and
+			trim(a.subcode08) = trim(b.subcode08) and
+			trim(a.composition_details_2) = trim(b.composition_details_2) and 
+			trim(yarn_count_2) = trim(b.yarn_count_2) and 
+			trim(gsm_2) = trim(b.gsm_2) and 
+			trim(pattern_2) = trim(b.pattern_2) and 
+			trim(buyer_id_2) = trim(b.buyer_id_2) and 
+			trim(major_fiber_2) = trim(b.major_fiber_2) and 
+			trim(fiber2_2) = trim(b.fiber2_2) and 
+			trim(fiber3_2) = trim(b.fiber3_2) and 
+			trim(fiber4_2) = trim(b.fiber4_2) and 
+			trim(fiber5_2) = trim(b.fiber5_2) and 
+			trim(fiber6_2) = trim(b.fiber6_2) and 
+
+			--trim(a.subcode09) = trim(b.dtxproductibeanseq) and
+			b.itemtypecode = 'FAB';
+		");
+
+		if ($this->db->trans_status() === FALSE) {
+			$this->db->trans_rollback();
+			$resp['code'] = 400;
+			$resp['messages'] = 'Error';
+		} else {
+			$this->db->trans_commit();
+			$resp['code'] = 200;
+			$resp['messages'] = 'Success';
+		}
+		var_dump("bulkupdateFAB DONE");
+		return $resp;
+	}
+
+	public function bulkupdateTRMnew()
+	{
+		$this->db->trans_begin();
+
+		$q = $this->db->query("
+			update
+			datatex_productibeandtl_241126 a
+			set dtxproductibeanid  = b.dtxproductibeanid  
+			from datatex_productibean_241126  b 
+			where 
+			trim(a.itemtypecode) = trim(b.itemtypecode) and 
+			trim(a.subcode01) = trim(b.subcode01) and
+			trim(a.subcode02) = trim(b.subcode02) and
+			trim(a.subcode03) = trim(b.subcode03) and
+			trim(a.subcode04) = trim(b.subcode04) and
+			trim(a.subcode05)  = trim(b.subcode05) and
+			trim(a.subcode06) = trim(b.subcode06) and
+			trim(a.brand_22) = trim(b.brand_22) and 
+			trim(a.tiket_thread_22) = trim(b.tiket_thread_22) and
+			trim(a.tex_22) = trim(b.tex_22) and
+			trim(a.count_ply_22) = trim(b.count_ply_22) and
+			trim(a.length_meter_22) = trim(b.length_meter_22) and
+			trim(a.width_22) = trim(b.width_22) and
+			trim(a.design_logo_22) = trim(b.design_logo_22) and
+			trim(a.quality_22) = trim(b.quality_22) and
+			trim(a.measurement_22) = trim(b.measurement_22) and
+			trim(a.thickness_22) = trim(b.thickness_22) and
+			trim(a.long_article_zipper_22) = trim(b.long_article_zipper_22) and
+			trim(a.shape_22) = trim(b.shape_22) and
+			--trim(a.subcode07) = trim(b.dtxproductibeanseq) and
+			b.itemtypecode = 'TRM';
+		");
+
+		if ($this->db->trans_status() === FALSE) {
+			$this->db->trans_rollback();
+			$resp['code'] = 400;
+			$resp['messages'] = 'Error';
+		} else {
+			$this->db->trans_commit();
+			$resp['code'] = 200;
+			$resp['messages'] = 'Success';
+		}
+		var_dump("bulkupdateTRM DONE");
+		return $resp;
+	}
+
+	public function bulkupdatePKGnew()
+	{
+		$this->db->trans_begin();
+
+		$q = $this->db->query("
+			update
+			datatex_productibeandtl_240706 a
+			set dtxproductibeanid  = b.dtxproductibeanid  
+			from datatex_productibean_240706  b 
+			where 
+			trim(a.itemtypecode) = trim(b.itemtypecode) and 
+			trim(a.subcode01) = trim(b.subcode01) and
+			trim(a.subcode02) = trim(b.subcode02) and
+			trim(a.subcode03) = trim(b.subcode03) and
+			trim(a.subcode04) = trim(b.subcode04) and
+			trim(a.subcode05)  = trim(b.subcode05) and
+			trim(a.subcode06) = trim(b.subcode06) and
+			trim(a.subcode07) = trim(b.subcode07) and
+			trim(a.brand_31) = trim(b.brand_31) and
+			trim(a.quality_31) = trim(b.quality_31) and
+			trim(a.hole_information_31) = trim(b.hole_information_31) and
+			trim(a.measurement_31) = trim(b.measurement_31) and
+			trim(a.shape_31) = trim(b.shape_31) and
+			trim(a.weight_31) = trim(b.weight_31) and
+			trim(a.printing_31) = trim(b.printing_31) and
+			trim(a.details_printing_31) = trim(b.details_printing_31) and
+			--trim(a.subcode08) = trim(b.dtxproductibeanseq) and
+			b.itemtypecode = 'PKG';
+		");
+
+		if ($this->db->trans_status() === FALSE) {
+			$this->db->trans_rollback();
+			$resp['code'] = 400;
+			$resp['messages'] = 'Error';
+		} else {
+			$this->db->trans_commit();
+			$resp['code'] = 200;
+			$resp['messages'] = 'Success';
+		}
+		var_dump("bulkupdatePKG DONE");
+		return $resp;
+	}
+
+	public function bulkupdateINSnew()
+	{
+		$this->db->trans_begin();
+
+		$q = $this->db->query("
+			update
+			datatex_productibeandtl_240706 a
+			set dtxproductibeanid  = b.dtxproductibeanid  
+			from datatex_productibean_240706  b 
+			where 
+			trim(a.itemtypecode) = trim(b.itemtypecode) and 
+			trim(a.subcode01) = trim(b.subcode01) and
+			trim(a.subcode02) = trim(b.subcode02) and
+			trim(a.subcode03) = trim(b.subcode03) and
+			trim(a.subcode04) = trim(b.subcode04) and
+			trim(a.subcode05)  = trim(b.subcode05) and
+			trim(a.subcode06) = trim(b.subcode06) and
+			trim(a.subcode07) = trim(b.subcode07) and
+			trim(a.subcode08) = trim(b.subcode08) and
+			trim(a.composition_details_12) = trim(b.composition_details_12)
+			trim(a.measurement_12) = trim(b.measurement_12)
+			trim(a.buyer_id_12) = trim(b.buyer_id_12)
+			--trim(a.subcode09) = trim(b.dtxproductibeanseq) and
+			b.itemtypecode = 'INS';
+
+		");
+
+		if ($this->db->trans_status() === FALSE) {
+			$this->db->trans_rollback();
+			$resp['code'] = 400;
+			$resp['messages'] = 'Error';
+		} else {
+			$this->db->trans_commit();
+			$resp['code'] = 200;
+			$resp['messages'] = 'Success';
+		}
+		var_dump("bulkupdateINS DONE");
+		return $resp;
+	}
 }
