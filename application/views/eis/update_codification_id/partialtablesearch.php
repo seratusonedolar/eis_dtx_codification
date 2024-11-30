@@ -25,6 +25,7 @@
 					<th style="background-color: aqua;"><?php echo "TechInf({$eTechinfsubcode['dtmsubcodetechinf_seq']}) <br>".$eTechinfsubcode['dtmsubcodetechinf_remark']; ?></th>
 				<?php endforeach;?>
 				<th style="background-color: powderblue;">Status Approve</th>
+				<th style="background-color: powderblue;">Datatex Sequence</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -116,6 +117,9 @@
 							     echo 'Approved'; } else {echo $groupDtmitemfilters[$dtmitem_id][0]['approval_status']; 
 								 } ?>
 					</td>
+					<td style="text-align: center;">
+						<?php echo $groupDtmitemfilters[$dtmitem_id][0]['dtxsequence'];?>
+					</td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
@@ -143,6 +147,7 @@
 					<th style="background-color: aqua;"><?php echo "TechInf({$eTechinfsubcode2['dtmsubcodetechinf_seq']})".$eTechinfsubcode2['dtmsubcodetechinf_remark']; ?></th>
 				<?php endforeach;?>
 				<th style="background-color: powderblue;">Status Approve</th>
+				<th style="background-color: powderblue;">Datatex Sequence</th>
 			</tr>
 		</tfoot>
 	</table>

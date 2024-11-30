@@ -73,7 +73,21 @@ class Update_codification_id extends MY_Controller
 						CASE 
 						WHEN MAX(error_subcode) OVER (PARTITION BY dtmitem_id) = 1 
 						THEN 1 ELSE 0 
-						END AS view_status
+						END AS view_status,
+						(select case when a.dtxsequence != '' then a.dtxsequence else b.dtxsequence end dtxsequence
+							from  
+							(select a.dtxsequence, b.item_id, c.status_subcode,b.itemtypecode 
+									from datatex_productibeandtl_241126 b
+									LEFT JOIN datatex_productibean_241126 a ON a.dtxproductibeanid = b.dtxproductibeanid 
+									LEFT JOIN datatex_productibeandtl_status_241126 c ON b.dtmitem_id = c.dtmitem_id 
+									WHERE b.item_id = es.item_id) a 
+									left join 				
+							(select a.dtxsequence, b.item_id, c.status_subcode,b.itemtypecode 
+									from datatex_productibeandtl_240706 b
+									LEFT JOIN datatex_productibean_240706 a ON a.dtxproductibeanid = b.dtxproductibeanid 
+									LEFT JOIN datatex_productibeandtl_status_240706 c ON b.dtmitem_id = c.dtmitem_id 
+									WHERE b.item_id = es.item_id) b on a.item_id=b.item_id
+						) dtxsequence
 					FROM es
 					)
 					SELECT *
