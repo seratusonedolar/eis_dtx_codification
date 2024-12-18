@@ -421,17 +421,16 @@ class ProductIBeanDetailService extends CI_model
 			trim(a.subcode06) = trim(b.subcode06) and
 			trim(a.subcode07) = trim(b.subcode07) and
 			trim(a.subcode08) = trim(b.subcode08) and
-			trim(a.composition_details_2) = trim(b.composition_details_2) and 
-			trim(yarn_count_2) = trim(b.yarn_count_2) and 
-			trim(gsm_2) = trim(b.gsm_2) and 
-			trim(pattern_2) = trim(b.pattern_2) and 
-			trim(buyer_id_2) = trim(b.buyer_id_2) and 
-			trim(major_fiber_2) = trim(b.major_fiber_2) and 
-			trim(fiber2_2) = trim(b.fiber2_2) and 
-			trim(fiber3_2) = trim(b.fiber3_2) and 
-			trim(fiber4_2) = trim(b.fiber4_2) and 
-			trim(fiber5_2) = trim(b.fiber5_2) and 
-			trim(fiber6_2) = trim(b.fiber6_2) and 
+			trim(a.yarn_count_2) = trim(b.yarn_count_2) and 
+			trim(a.gsm_2) = trim(b.gsm_2) and 
+			trim(a.pattern_2) = trim(b.pattern_2) and 
+			trim(a.buyer_id_2) = trim(b.buyer_id_2) and 
+			trim(a.major_fiber_2) = trim(b.major_fiber_2) and 
+			trim(a.fiber2_2) = trim(b.fiber2_2) and 
+			trim(a.fiber3_2) = trim(b.fiber3_2) and 
+			trim(a.fiber4_2) = trim(b.fiber4_2) and 
+			trim(a.fiber5_2) = trim(b.fiber5_2) and 
+			trim(a.fiber6_2) = trim(b.fiber6_2) and 
 
 			--trim(a.subcode09) = trim(b.dtxproductibeanseq) and
 			b.itemtypecode = 'FAB';
@@ -446,7 +445,7 @@ class ProductIBeanDetailService extends CI_model
 			$resp['code'] = 200;
 			$resp['messages'] = 'Success';
 		}
-		var_dump("bulkupdateFAB DONE");
+		var_dump("bulkupdateFAB DONE ".$q);
 		return $resp;
 	}
 
@@ -502,9 +501,9 @@ class ProductIBeanDetailService extends CI_model
 
 		$q = $this->db->query("
 			update
-			datatex_productibeandtl_240706 a
+			datatex_productibeandtl_241126 a
 			set dtxproductibeanid  = b.dtxproductibeanid  
-			from datatex_productibean_240706  b 
+			from datatex_productibean_241126  b 
 			where 
 			trim(a.itemtypecode) = trim(b.itemtypecode) and 
 			trim(a.subcode01) = trim(b.subcode01) and
@@ -545,9 +544,9 @@ class ProductIBeanDetailService extends CI_model
 
 		$q = $this->db->query("
 			update
-			datatex_productibeandtl_240706 a
+			datatex_productibeandtl_241126 a
 			set dtxproductibeanid  = b.dtxproductibeanid  
-			from datatex_productibean_240706  b 
+			from datatex_productibean_241126  b 
 			where 
 			trim(a.itemtypecode) = trim(b.itemtypecode) and 
 			trim(a.subcode01) = trim(b.subcode01) and
@@ -558,9 +557,9 @@ class ProductIBeanDetailService extends CI_model
 			trim(a.subcode06) = trim(b.subcode06) and
 			trim(a.subcode07) = trim(b.subcode07) and
 			trim(a.subcode08) = trim(b.subcode08) and
-			trim(a.composition_details_12) = trim(b.composition_details_12)
-			trim(a.measurement_12) = trim(b.measurement_12)
-			trim(a.buyer_id_12) = trim(b.buyer_id_12)
+			trim(a.composition_details_12) = trim(b.composition_details_12) and
+			trim(a.measurement_12) = trim(b.measurement_12) and
+			trim(a.buyer_id_12) = trim(b.buyer_id_12) and
 			--trim(a.subcode09) = trim(b.dtxproductibeanseq) and
 			b.itemtypecode = 'INS';
 

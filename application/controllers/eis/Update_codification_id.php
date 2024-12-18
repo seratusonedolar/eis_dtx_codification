@@ -49,7 +49,7 @@ class Update_codification_id extends MY_Controller
 							a.dtmitem_code,a.approval_status,
 							b.dtmitemdtl_code, c.dtmsubcodedtl_type, c.dtmsubcodedtl_seq, d.dtmsubcodehierarchy_name, d.dtmsubcodehierarchy_code, 
 							d.dtmsubcodehierarchy_state, e.dtmsubcode_code, e.dtmsubcode_id , f.um_id, u.name,
-							i.name as item_name,a.dtmitem_description,
+							i.name as item_name,a.dtmitem_description,a.dtxsequence_prod,
 							CASE 
 							WHEN d.dtmsubcodehierarchy_state = 'reject' 
 							THEN 1 

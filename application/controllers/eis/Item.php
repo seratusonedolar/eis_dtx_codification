@@ -861,7 +861,7 @@ class Item extends MY_Controller
              * > Delete in = datatex_m_item_tech_information
              * > Delete in = datatex_m_item
              */
-			$query_productibean = "INSERT INTO datatex_productibeandtl_status_240706 (dtmitem_id,status_subcode,date_input)
+			$query_productibean = "INSERT INTO datatex_productibeandtl_status_241126 (dtmitem_id,status_subcode,date_input)
 			VALUES (?, ?, NOW())";
 
             if ($slug == 'EDIT') {

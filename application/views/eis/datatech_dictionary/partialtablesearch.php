@@ -4,7 +4,7 @@
 					<tr style="text-align: center;">
 						<th style="background-color: burlywood;">Item Type</th>
 						<th style="background-color: burlywood;">Item ID</th>
-						<th style="background-color: burlywood;">Datatex Sequence</th>
+						<th style="background-color: burlywood;">Datatex Sequence Prod</th>
 						<th style="background-color: burlywood;">Status</th>
 					</tr>
 				</thead>
@@ -14,7 +14,7 @@
 							<tr>
 								<td><?php echo htmlspecialchars($row['itemtypecode']); ?></td>
 								<td><?php echo htmlspecialchars($row['item_id']); ?></td>
-								<td style="text-align: center;"><?php echo htmlspecialchars($row['dtxsequence'] !== null ? $row['dtxsequence'] : '-'); ?></td>
+								<td style="text-align: center;"><?php echo htmlspecialchars($row['dtxsequence_prod'] !== null ? $row['dtxsequence_prod'] : '-'); ?></td>
 								<td style="text-align: center;"><?php echo htmlspecialchars($row['status_subcode']); ?></td>
 							</tr>
 						<?php endforeach; ?>

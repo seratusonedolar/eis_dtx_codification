@@ -24,6 +24,7 @@
 					<th style="background-color: aqua;"><?php echo "TechInf({$eTechinfsubcode['dtmsubcodetechinf_seq']}) <br>".$eTechinfsubcode['dtmsubcodetechinf_remark']; ?></th>
 				<?php endforeach;?>
 				<th style="background-color: powderblue;">Approval</th>
+				<th style="background-color: powderblue;">Dtx Sequence Prod</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -122,6 +123,9 @@
 							<button class="btn btn-success" onclick="approveItem(this)" data-dtmsubcode-id="<?= $groupDtmitemfilters[$dtmitem_id][0]['dtmsubcode_id'] ?>" data-dtmitem-id="<?= $groupDtmitemfilters[$dtmitem_id][0]['dtmitem_id']  ?>">Approve</button>
 						<?php endif; ?> -->
 					</td>
+					<td style="text-align: center;">
+						<?php echo $groupDtmitemfilters[$dtmitem_id][0]['dtxsequence_prod'];?>
+					</td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
@@ -149,6 +153,7 @@
 					<th style="background-color: aqua;"><?php echo "TechInf({$eTechinfsubcode2['dtmsubcodetechinf_seq']})".$eTechinfsubcode2['dtmsubcodetechinf_remark']; ?></th>
 				<?php endforeach;?>
 				<th style="background-color: powderblue;">Approval</th>
+				<th style="background-color: powderblue;">Dtx Sequence Prod</th>
 			</tr>
 		</tfoot>
 	</table>

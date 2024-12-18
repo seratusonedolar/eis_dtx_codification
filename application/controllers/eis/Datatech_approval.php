@@ -84,7 +84,7 @@ class Datatech_approval extends MY_Controller
 							a.dtmitem_code, a.approval_status,
 							b.dtmitemdtl_code, c.dtmsubcodedtl_type, c.dtmsubcodedtl_seq, d.dtmsubcodehierarchy_name, d.dtmsubcodehierarchy_code, 
 							d.dtmsubcodehierarchy_state, e.dtmsubcode_code, e.dtmsubcode_id , z.um_id as um_id, u.name,
-							z.name as item_desc,a.dtmitem_description,
+							z.name as item_desc,a.dtmitem_description,a.dtxsequence_prod,
 							CASE 
 							WHEN d.dtmsubcodehierarchy_state = 'reject' OR d.dtmsubcodehierarchy_state = 'pending'
 							AND (
@@ -146,7 +146,7 @@ class Datatech_approval extends MY_Controller
 							a.dtmitem_code, a.approval_status,
 							b.dtmitemdtl_code, c.dtmsubcodedtl_type, c.dtmsubcodedtl_seq, d.dtmsubcodehierarchy_name, d.dtmsubcodehierarchy_code, 
 							d.dtmsubcodehierarchy_state, e.dtmsubcode_code, e.dtmsubcode_id , z.um_id as um_id, u.name,
-							z.name as item_desc,a.dtmitem_description,
+							z.name as item_desc,a.dtmitem_description,a.dtxsequence_prod,
 							CASE 
 							WHEN d.dtmsubcodehierarchy_state = 'reject' OR d.dtmsubcodehierarchy_state = 'pending'
 							AND (
@@ -217,7 +217,7 @@ class Datatech_approval extends MY_Controller
 							a.dtmitem_code,a.approval_status,
 							b.dtmitemdtl_code, c.dtmsubcodedtl_type, c.dtmsubcodedtl_seq, d.dtmsubcodehierarchy_name, d.dtmsubcodehierarchy_code, 
 							d.dtmsubcodehierarchy_state, e.dtmsubcode_code, e.dtmsubcode_id , f.um_id, u.name,
-							i.name as item_desc,a.dtmitem_description,
+							i.name as item_desc,a.dtmitem_description,a.dtxsequence_prod,
 							CASE 
 							WHEN d.dtmsubcodehierarchy_state = 'reject' OR d.dtmsubcodehierarchy_state = 'pending'
 							AND (
