@@ -211,9 +211,9 @@ $(document).ready(function() {
 		const dtmitem_id = $(this).closest('tr').find('td:first').text();
 		var approval_status = $(this).data('approval');
 
-		if(approval_status === 'confirmed'){
-			console.log('confirmed')
-		}else{
+		//if(approval_status === 'confirmed'){
+		//	console.log('confirmed')
+		//}else{
 			var dtmsubcode_id = $(this).data('dtmsubcode-id');
 			var clickedValue = null;
 			var clickedName = null;
@@ -810,7 +810,7 @@ $(document).ready(function() {
 		// });
 
 			}
-		}
+		//}
         
     });
 });
