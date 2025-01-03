@@ -80,7 +80,7 @@
 						endfor;
 					endif;
 					?>
-					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['um_id'] ?></td>
+					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['dtmitem_uom_id'] ?></td>
 					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['name'] ?></td>
 					<!-- Tech Inf -->
 					<?php 
