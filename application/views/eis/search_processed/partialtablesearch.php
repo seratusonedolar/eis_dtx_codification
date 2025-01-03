@@ -168,7 +168,7 @@
 					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['classname']?></td>
 					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['subclassname']?></td>
 					<td style="font-size: 90%;"><?= substr($groupDtmitemfilters[$dtmitem_id][0]['name'],0,50).'...' ?></td>
-					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['um_id'] ?></td>
+					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['dtmitem_uom_id'] ?></td>
 					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['dtmitem_uom_id'] ?></td>
 					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['dtmitem_created_by'] ?></td>
 					<td><?= $groupDtmitemfilters[$dtmitem_id][0]['dtmitem_created_at'] ?></td>

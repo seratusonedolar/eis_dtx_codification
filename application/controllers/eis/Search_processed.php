@@ -96,7 +96,7 @@ class Search_processed extends MY_Controller
 				c.dtmsubcodedtl_type,
 				d.dtmsubcodehierarchy_name, d.dtmsubcodehierarchy_state, d.dtmsubcode_note_validate, d.dtmsubcode_upload_qa, d.dtmsubcode_upload_prod,
 				e.dtmsubcode_code,
-				f.name, f.um_id
+				f.name, f.um_id, a.dtmitem_uom_id
 				from datatex_m_item a
 				left join datatex_m_item_detail b on b.dtmitem_id = a.dtmitem_id
 				left join datatex_m_subcode_detail c on b.dtmsubcodedtl_id = c.dtmsubcodedtl_id 
