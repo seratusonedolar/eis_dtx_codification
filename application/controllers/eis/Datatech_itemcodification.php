@@ -262,6 +262,11 @@ class Datatech_itemcodification extends MY_Controller
                     'dtmsubcodehierarchy_updated_at' => date('Y-m-d H:i:s'),
                     'dtmsubcodehierarchy_user_id' => $this->user_id
                 ];
+				$arrayHierarchy2item = [
+                    'dtmitemdtl_code' => $dtmsubcodehierarchy_code,
+                    'dtmitemdtl_updated_at' => date('Y-m-d H:i:s'),
+                ];
+
                 if ($slug == 'add' || $slug == 'EXTENDVIEW') {
                     $this->db->trans_begin();
 
@@ -289,6 +294,7 @@ class Datatech_itemcodification extends MY_Controller
                     $this->LogTransactionModel->generateLog($dataLog, 'UPDATE', $this->user_id);
 
                     $this->db->update('datatex_m_subcode_hierarchy', $arrayHierarchy, array('dtmsubcodehierarchy_id' => $dtmsubcodehierarchy_id));
+					$this->db->update('datatex_m_item_detail', $arrayHierarchy2item, array('dtmsubcodehierarchy_id' => $dtmsubcodehierarchy_id));
 
                     if ($this->db->trans_status() === FALSE) {
                         $this->db->trans_rollback();
