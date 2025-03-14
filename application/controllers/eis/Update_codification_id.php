@@ -409,7 +409,7 @@ class Update_codification_id extends MY_Controller
 		$validate = $this->validateuser($dtmitem_id);
 		if($validate){
 			$query = "UPDATE datatex_m_item_detail SET dtmitemdtl_code = ? 
-					  WHERE dtmitem_id = ? AND dtmitemdtl_code = ?";
+					  WHERE dtmitem_id = ? AND dtmitemdtl_code = ? AND dtmsubcodehierarchy_id isnull";
 	
 			$this->db->query($query, array($new_value, $dtmitem_id, $old_value));
 	

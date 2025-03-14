@@ -439,10 +439,10 @@ class Datatech_itemcodification extends MY_Controller
         $datatables = new Datatables(new CodeigniterAdapter);
 
         $datatables->query(
-            "SELECT datatex_m_subcode_hierarchy.dtmsubcodehierarchy_id, datatex_m_subcode_hierarchy.dtmsubcodehierarchy_code,
+            "SELECT datatex_m_subcode_hierarchy.dtmsubcodehierarchy_id,datatex_m_subcode_hierarchy.dtmsubcodehierarchy_id as hid, datatex_m_subcode_hierarchy.dtmsubcodehierarchy_code,
             datatex_m_subcode_hierarchy.dtmsubcodehierarchy_name, dtmsubcodehierarchy_is_active, dtmsubcodehierarchy_state, dtmsubcodehierarchy_updated_at
             FROM datatex_m_subcode_hierarchy
-            WHERE datatex_m_subcode_hierarchy.dtmsubcode_id = $id"
+            WHERE datatex_m_subcode_hierarchy.dtmsubcode_id in (65, 21, 39, 76, 90, 81, 29, 11)"
         );
 
         $datatables->edit('dtmsubcodehierarchy_id', function ($data) {

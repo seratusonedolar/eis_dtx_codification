@@ -39,6 +39,7 @@ $this->load->section('scriptJS', $class_link . '/subcode_hierarchy_index_js', $d
                         <thead>
                             <tr style="text-align: center;">
                                 <th>HierarchyID</th>
+								<th>ID</th>
                                 <th>HierarchyCode</th>
                                 <th>HierarchyName</th>
                                 <th>IsActive</th>
@@ -49,6 +50,7 @@ $this->load->section('scriptJS', $class_link . '/subcode_hierarchy_index_js', $d
                         <tfoot>
                             <tr style="text-align: center;">
                                 <th>HierarchyID</th>
+								<th>ID</th>
                                 <th>HierarchyCode</th>
                                 <th>HierarchyName</th>
                                 <th>IsActive</th>
