@@ -20,10 +20,10 @@
         "columnDefs": [{
             "searchable": false,
             "orderable": true,
-            "targets": [0, 3, 4]
+            "targets": [0, 2, 3, 4]
         }, ],
         order: [
-            [1, 'asc']
+            [2, 'asc']
         ]
     });
 

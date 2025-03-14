@@ -1,7 +1,7 @@
 <script type="text/javascript">
     // Setup - add a text input to each footer cell
     $('#idTable tfoot th').each(function(e) {
-        let columnAllowedFilter = [1, 2, 4];
+        let columnAllowedFilter = [2, 3, 4];
 		if (columnAllowedFilter.includes(e)){
             var title = $(this).text();
             $(this).html('<input type="text" placeholder="Search ' + title + '" />');
@@ -13,7 +13,7 @@
         "lengthChange": true,
         "searching": true,
         "search": {
-            return: true,
+            return: false,
         },
         "ordering": true,
         "info": true,
@@ -45,10 +45,10 @@
         "columnDefs": [{
             "searchable": false,
             "orderable": true,
-            "targets": [0, 3, 5]
+            "targets": [0, 5]
         }, ],
         order: [
-            [5, 'desc']
+            [2, 'desc']
         ]
     });
 
