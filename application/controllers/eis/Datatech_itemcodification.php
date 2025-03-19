@@ -437,12 +437,16 @@ class Datatech_itemcodification extends MY_Controller
         $id = $this->input->get('id');
 
         $datatables = new Datatables(new CodeigniterAdapter);
-
+		if ($id == '65' && $id == '21' && $id == 39 && $id == 76 && $id == 90 && $id == 81 && $id == 29 && $id == 11){
+			$id2 = "in (65, 21, 39, 76, 90, 81, 29, 11)";
+		} else {
+			$id2 = "= ".$id;
+		}
         $datatables->query(
             "SELECT datatex_m_subcode_hierarchy.dtmsubcodehierarchy_id,datatex_m_subcode_hierarchy.dtmsubcodehierarchy_id as hid, datatex_m_subcode_hierarchy.dtmsubcodehierarchy_code,
             datatex_m_subcode_hierarchy.dtmsubcodehierarchy_name, dtmsubcodehierarchy_is_active, dtmsubcodehierarchy_state, dtmsubcodehierarchy_updated_at
             FROM datatex_m_subcode_hierarchy
-            WHERE datatex_m_subcode_hierarchy.dtmsubcode_id in (65, 21, 39, 76, 90, 81, 29, 11)"
+            WHERE datatex_m_subcode_hierarchy.dtmsubcode_id $id2"
         );
 
         $datatables->edit('dtmsubcodehierarchy_id', function ($data) {
