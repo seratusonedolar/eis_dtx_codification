@@ -616,7 +616,7 @@ $(document).ready(function() {
 												const columnIndex = $(this).closest('td').index();
 												const dtmitem_id = $(this).closest('tr').find('td:first').text(); // Get old value id for this column index
 												const $select = $(this);
-													if (columnIndex >= 4 && columnIndex <= 12) {
+													if (columnIndex >= 4 && columnIndex <= 14) {
 														$.ajax({
 															url: '<?php echo base_url() . $class_link . '/updatesubcode'?>',
 															type: 'POST',
