@@ -47,7 +47,11 @@ class Datatech_dictionary extends MY_Controller
 // 		LEFT JOIN datatex_productibeandtl_status_240706 c ON b.dtmitem_id = c.dtmitem_id 
 // 		WHERE b.itemtypecode = '$type_code') b on a.item_id=b.item_id")->result_array();
 
-		$data['dictionary'] = $this->db->query("select z.dtxsequence_prod, z.item_id, c.status_subcode,b.itemtypecode 
+		$data['dictionary'] = $this->db->query("select 
+		case when z.dtxsequence_prod != '' then z.dtxsequence_prod else z.dtxsequence_prod_upload end dtxsequence_prod, 
+		z.item_id, 
+		case when z.dtxsequence_prod != '' or z.dtxsequence_prod_upload != '' then 'confirmed' else c.status_subcode end status_subcode,
+		b.itemtypecode 
 		from datatex_m_item z
 		left join datatex_productibeandtl_241126 b on z.dtmitem_id=b.dtmitem_id
 		LEFT JOIN datatex_productibeandtl_status_241126 c ON b.dtmitem_id = c.dtmitem_id 

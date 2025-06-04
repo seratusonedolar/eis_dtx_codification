@@ -90,7 +90,7 @@ class Update_codification extends MY_Controller
 							ELSE 0 
 							END AS error_subcode
 					FROM datatex_m_item a
-					LEFT JOIN datatex_m_item_detail b ON b.dtmitem_id = a.dtmitem_id
+					LEFT JOIN datatex_m_item_detail b ON b.dtmitem_id = a.dtmitem_id 
 					LEFT JOIN datatex_m_subcode_detail c ON b.dtmsubcodedtl_id = c.dtmsubcodedtl_id 
 					LEFT JOIN datatex_m_subcode_hierarchy d ON d.dtmsubcodehierarchy_id = b.dtmsubcodehierarchy_id 
 					LEFT JOIN datatex_m_subcode e ON e.dtmsubcode_id = a.dtmsubcode_id 
@@ -99,7 +99,7 @@ class Update_codification extends MY_Controller
 					LEFT JOIN m_subclassification h ON h.subclassif_id = f.subclassif_id
 					LEFT JOIN m_users u ON u.user_id=a.dtmitem_created_by
 					LEFT JOIN m_item i on i.item_id = a.item_id
-					WHERE e.dtmsubcode_id = ? 
+					WHERE upload_status = 0 and e.dtmsubcode_id = ? 
 					),
 					vs AS (
 					SELECT 
@@ -162,7 +162,7 @@ class Update_codification extends MY_Controller
 					LEFT JOIN m_subclassification h ON h.subclassif_id = f.subclassif_id
 					LEFT JOIN m_users u ON u.user_id=a.dtmitem_created_by
 					LEFT JOIN m_item i on i.item_id = a.item_id
-				 	WHERE e.dtmsubcode_id = ? AND a.dtmitem_created_by IN ?
+				 	WHERE upload_status = 0 and e.dtmsubcode_id = ? AND a.dtmitem_created_by IN ?
 					),
 					vs AS (
 					SELECT 

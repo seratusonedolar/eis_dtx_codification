@@ -65,7 +65,7 @@ class Update_codification_id extends MY_Controller
 					LEFT JOIN m_subclassification h ON h.subclassif_id = f.subclassif_id
 					LEFT JOIN m_users u ON u.user_id=a.dtmitem_created_by
 					LEFT JOIN m_item i on i.item_id = a.item_id
-					WHERE a.item_id IN ?
+					WHERE upload_status = 0 and a.item_id IN ?
 					),
 					vs AS (
 					SELECT 
