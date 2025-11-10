@@ -31,13 +31,13 @@ $form_id = 'idForm';
         >
             <i class="fas fa-edit"></i> 
         </button> -->
-        <button 
+        <!-- <button 
             class="btn btn-sm btn-warning float-right" 
             title="Edit"
             onclick="action_edit_mitem('<?php echo $datatech_item['dtmitem_id']; ?>');"
         >
             <i class="fas fa-edit"></i> 
-        </button>
+        </button> -->
     <?php endif; ?>
 <?php endif; ?>
 <h5>EIS</h5>
